@@ -3,20 +3,23 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-
-
-const Stack = createStackNavigator();
-
-export default function Connexion({ navigation }) {
+export default function Inscription({ navigation }) {
   
     return ( 
 
         <View style={styles.container}>
-          <Text style={styles.logo}>Iot-Project</Text>
+          <Text style={styles.logo}>Formulaire d'inscription</Text>
           <View style={styles.inputView} >
             <TextInput  
               style={styles.inputText}
-              placeholder="Nom d'utilisateur..." 
+              placeholder="Votre adresse e-mail" 
+              placeholderTextColor="#003f5c"
+              onChangeText={text => this.setState({mail:text})}/>
+          </View>
+          <View style={styles.inputView} >
+            <TextInput  
+              style={styles.inputText}
+              placeholder="Choisir un pseudo" 
               placeholderTextColor="#003f5c"
               onChangeText={text => this.setState({username:text})}/>
           </View>
@@ -24,17 +27,11 @@ export default function Connexion({ navigation }) {
             <TextInput  
               secureTextEntry
               style={styles.inputText}
-              placeholder="Mot de passe" 
+              placeholder="Choisir un mot de passe" 
               placeholderTextColor="#003f5c"
               onChangeText={text => this.setState({password:text})}/>
           </View>
-          <TouchableOpacity>
-            <Text style={styles.forgot}>Mot de passe oublié ?</Text>
-          </TouchableOpacity>
           <TouchableOpacity style={styles.loginBtn}>
-            <Text style={styles.loginText} onPress={() => navigation.navigate('Accueil')}>Se connecter</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
             <Text style={styles.loginText} onPress={() => navigation.navigate('Inscription')}>S'inscrire</Text>
           </TouchableOpacity>
         </View>
@@ -53,7 +50,8 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
     fontSize:50,
     color:"#fb5b5a",
-    marginBottom:40
+    marginBottom:40,
+    textAlign:"center",
   },
   inputView:{
     width:"80%",

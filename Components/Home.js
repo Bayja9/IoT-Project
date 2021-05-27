@@ -20,7 +20,7 @@ export default function Home({ navigation }) {
         <DataTable.Row>
           <DataTable.Cell>object.id</DataTable.Cell>
           <DataTable.Cell >connecté</DataTable.Cell>
-          <DataTable.Cell style={ styles.cell } onPress={() => navigation.navigate('')} >voir</DataTable.Cell>
+          <DataTable.Cell style={ styles.cell } onPress={() => navigation.navigate('Historique')} >voir</DataTable.Cell>
         </DataTable.Row>
 
         <DataTable.Row>
