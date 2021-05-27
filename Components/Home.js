@@ -8,20 +8,33 @@ import { DataTable } from 'react-native-paper';
 
 
 export default function Home({ navigation }) {
+
+
+  const objet = []
+
+  // for (let object of objects) {
+  //   objet.push(
+  //       <DataTable.Row>
+  //         <DataTable.Cell>object.nom</DataTable.Cell>
+  //         <DataTable.Cell >object.isConnected</DataTable.Cell>
+  //         <DataTable.Cell style={ styles.cell } onPress={() => navigation.navigate('Historique')} >voir</DataTable.Cell>
+  //       </DataTable.Row>);
+  // }
+
     return (
       <View style={ styles.container }>
- <DataTable>
+      <DataTable>
         <DataTable.Header>
           <DataTable.Title>Nom</DataTable.Title>
           <DataTable.Title>Status</DataTable.Title>
           <DataTable.Title>Historique</DataTable.Title>
         </DataTable.Header>
-
         <DataTable.Row>
-          <DataTable.Cell>object.id</DataTable.Cell>
-          <DataTable.Cell >connecté</DataTable.Cell>
+          <DataTable.Cell>object.nom</DataTable.Cell>
+          <DataTable.Cell >object.isConnected</DataTable.Cell>
           <DataTable.Cell style={ styles.cell } onPress={() => navigation.navigate('Historique')} >voir</DataTable.Cell>
         </DataTable.Row>
+        {/* {objet} */}
 
         <DataTable.Row>
           <DataTable.Cell>objet2</DataTable.Cell>
