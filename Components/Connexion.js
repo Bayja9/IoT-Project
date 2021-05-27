@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -10,17 +10,16 @@ const Stack = createStackNavigator();
 export default function Connexion({ navigation }) {
 
   
-    return (
- 
+    return ( 
 
         <View style={styles.container}>
           <Text style={styles.logo}>Iot-Project</Text>
           <View style={styles.inputView} >
             <TextInput  
               style={styles.inputText}
-              placeholder="Email..." 
+              placeholder="Nom d'utilisateur..." 
               placeholderTextColor="#003f5c"
-              onChangeText={text => this.setState({email:text})}/>
+              onChangeText={text => this.setState({username:text})}/>
           </View>
           <View style={styles.inputView} >
             <TextInput  
